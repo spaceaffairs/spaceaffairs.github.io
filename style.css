@@ -1,0 +1,270 @@
+html {
+  font-size: 20px; /* px means "pixels": the base font size is now 10 pixels high  */
+  font-family: "Open Sans", sans-serif; /* this should be the rest of the output you got from Google fonts */
+}
+/* body {
+  background-image: url('/images/sky0.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* * {box-sizing: border-box} */
+
+/* Style tab links */
+/* .tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+} */
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  /* color: white; */
+  display: none;
+  padding: 20px 20px;
+  height: 100%;
+  /* color: Black;
+  text-decoration: none; */
+}
+
+.box-description {
+    /* float: left; */
+    width: 20%;
+    /* font-size: 1vw; */
+}
+
+.box-video {
+    position: relative;
+    /* float: right; */
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    /* margin-top: 50px; */
+}
+.box-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.box-zine {
+    position: relative;
+    /* float: right; */
+    width: 100%;
+    height: 0;
+    padding-top: 70%;
+}
+.box-zine iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.box-main {
+  display: flex;
+  flex-direction: row;
+}
+.main-archive {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.main {
+  margin: auto;
+  width: 50%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  font-size: 1vw;
+}
+
+.topnav {
+  overflow: hidden;
+  /* background-color: #88d6e1; */
+}
+
+/* .topnav responsive{
+  overflow: hidden;
+  background-color: #88d6e1;
+} */
+.topnav a {
+  float: left;
+  display: block;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #dddddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #dddddd;
+  /* color: white;*/
+}
+
+.topnav .icon {
+  display: none;
+}
+
+a.link-logo {
+  /* padding: 5%; */
+  background-color: #ffffff;
+}
+
+a.link-logo:hover {
+  /* padding: 5%; */
+  background-color: #dddddd;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.li {
+  font-size: 12pt;
+ display: inline;
+ float: left;
+}
+ul.a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+ul.li a:hover {
+  background-color: #111;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+
+
+img.logo {
+  width: 3cm;
+  height: auto;
+  object-fit: contain;
+  padding: 2%;
+}
+
+.home {
+  /* background-image: url("/images/IASA_logo.svg");
+  background-repeat: no-repeat;
+  background-size: fill; */
+  width: 70%;
+  height: auto;
+  text-align: center;
+  object-fit: contain;
+  /* padding: 2%; */
+  /* align-items: center; */
+  margin-left: auto;
+  margin-right: auto;
+}
+H2 { text-align: center }
+.news {
+  /* background-image: url("/images/IASA_logo.svg");
+  background-repeat: no-repeat;
+  background-size: fill; */
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  /* padding: 2%; */
+  /* align-items: center; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo-banner {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.logo-banner>* {
+  flex: 0 0 16%;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+  .main {
+    width: 50%;
+    float: center;
+  }
+  /* body {
+    background-image: none;  
+  } */
+
+  .main-archive {
+    width: 80%;
+    padding: 0;
+  }
+  .home {
+    width: 100%;
+  }
+  
+  .news {
+    width: 100%;
+  }
+
+  .logo-banner {
+    flex-direction: row;
+  }
+  img.logo {
+    width: 16%;
+  }
+
+  .box-description, .main-archive, .main {
+    width: 100%;
+  }
+
+  .box-main {
+    flex-direction: column-reverse;
+}
+.logo-banner {
+  flex-direction: column;
+}
+img.logo {
+  float: center;
+  width: 80%;
+}
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
