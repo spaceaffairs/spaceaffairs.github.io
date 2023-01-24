@@ -12,8 +12,11 @@
       <a href="javascript:void(0)" class="closebtn" onclick="closeNav2()">&times;</a>\
       <div class="overlay-content">\
             <h1> Selected works </h1>\
+            <h2> &#8210; interventions &#8210; </h2>\
             <a href="digital.html">Digital</a>\
             <a href="O.html">O</a>\
+            <h2> &#8210; education &#8210; </h2>\
+            <a href="defyinggravity.html">Defying Gravity</a>\
          </div>\
     </div>\
     <span style="font-size:30px;color:white;cursor:pointer;z-index:99" onclick="openNav()">&#9776; menu</span>\

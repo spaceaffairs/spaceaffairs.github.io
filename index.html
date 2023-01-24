@@ -79,7 +79,7 @@
             const positions = new Float32Array( MAX_POINTS * 3 ); // 3 vertices per point
             geometry.setAttribute( 'position', new THREE.BufferAttribute( positions, 3 ) );
             // material
-            const material = new THREE.PointsMaterial( { color: 0xffffff } );
+            const material = new THREE.PointsMaterial( { color: 0xf1c97d } );
             // line
             line = new THREE.Points( geometry,  material );
             scene.add( line );
@@ -91,7 +91,7 @@
         function updatePositions() {
 	        const positions = line.geometry.attributes.position.array;
 	        let index = 0;
-	        for ( let uu = 0; uu < Math.PI; uu += 0.05 ) {
+	        for ( let uu = 0; uu < Math.PI; uu += 0.01 ) {
 		        for ( let v = 0; v < 2 * Math.PI; v += 0.1 ) {
                     let u = uu + t;
 	                const cosu = Math.cos(u);
