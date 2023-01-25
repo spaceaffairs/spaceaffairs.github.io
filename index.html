@@ -67,11 +67,9 @@
             scene = new THREE.Scene();
             // camera
             camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 1, 10000 );
-            //camera.position.set( -400,0,500 );
-            //camera.position.set( -160,-300,-300 );
-            camera.position.set( -639.3437554733069, 184.519712087381, 469.69401686437135  );
+            camera.position.set( -235.27081612572493, -305.1106389014066, 717.6179850024755 );
             camera.up.set( -1,0,1);
-            camera.rotation.set(-0.37432819829778047, -0.9026096231919428, -2.846792814008019);
+            camera.rotation.set(0.4020158105765042, -0.29302629720505974, 1.0559101215524487);
             const controls = new OrbitControls(camera, renderer.domElement)
             controls.enableDamping = true;
             // geometry
@@ -101,7 +99,7 @@
 			        positions[ index ++ ] = -100 + (-18) * cosu * (3.0 * cosv - 30.0 * sinu + 90.0 *Math.pow(Math.abs(cosu),4) * sinu - 60.0 * Math.pow(Math.abs(cosu),6) * sinu + 5.0 * cosu * cosv * sinu );
 			        positions[ index ++ ] = -200 + (-10.2) * sinu * (3.0 * cosv - 3.0 * Math.pow(Math.abs(cosu),2) * cosv - 48.0 * Math.pow(Math.abs(cosu), 4)*cosv + 48.0 * Math.pow(Math.abs(cosu),6) * cosv - 60.0 * sinu + 5.0 * cosu * cosv * sinu - 5.0 * Math.sign(cosu)*Math.pow(Math.abs(cosu), 3) * cosv * sinu - 80.0 * Math.sign(cosu)*Math.pow(Math.abs(cosu), 5) * cosv * sinu + 80.0 * Math.sign(cosu)*Math.pow(Math.abs(cosu), 7) * cosv * sinu) - 1.0;
 			        positions[ index ++ ] = 18 * ( 3.0 + 5.0 * cosu * sinu) * Math.sin(v);
-		        }//-150 + , -100+
+		        }
 	        }
         }
 
@@ -117,7 +115,7 @@
 	        updatePositions();
 	        line.geometry.attributes.position.needsUpdate = true; // required after the first render
 	        render();
-            console.log(camera.position, camera.rotation);
+            //console.log(camera.position, camera.rotation);
         }
 	</script>
   </body>
