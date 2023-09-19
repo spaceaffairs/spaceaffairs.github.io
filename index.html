@@ -36,12 +36,10 @@
         import { RenderPass } from 'https://unpkg.com/three/examples/jsm/postprocessing/RenderPass.js';
         import { EffectComposer } from 'https://unpkg.com/three/examples/jsm/postprocessing/EffectComposer.js';
         import { UnrealBloomPass } from 'https://unpkg.com/three/examples/jsm/postprocessing/UnrealBloomPass.js';
-        //import { VRButton } from 'https://unpkg.com/three/examples/jsm/webxr/VRButton.js';
 
         const container = document.getElementById('container');
 
-        let renderer, scene, camera, stats, composer, renderScene, bloomPass, bulbLight;
-        let mesh;
+        let renderer, scene, camera, composer, renderScene, bloomPass;
 
         init();
         animate();
@@ -60,14 +58,13 @@
             //info.style.fontFamily = 'Monospace';
             //document.body.appendChild(info);
             //// renderer
-            ////renderer = new THREE.WebGLRenderer({ alpha: true });
+            renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 
-            renderer = new THREE.WebGLRenderer({ alpha: true }); //antialias: true,
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
-            renderer.shadowMap.enabled = true;
+            //renderer.shadowMap.enabled = true;
             //renderer.xr.enabled = true;
-            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            //renderer.shadowMap.type = THREE.PCFSoftShadowMap;
             document.body.appendChild(renderer.domElement);
             //container.appendChild(renderer.domElement);
             //document.body.appendChild(VRButton.createButton(renderer));
@@ -78,22 +75,22 @@
             camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1000);
             camera.position.z = 30;
 
-            renderScene = new RenderPass(scene, camera);
-            composer = new EffectComposer(renderer);
-            composer.addPass(renderScene);
+            //renderScene = new RenderPass(scene, camera);
+            //composer = new EffectComposer(renderer);
+            //composer.addPass(renderScene);
 
-            bloomPass = new UnrealBloomPass(
-                new THREE.Vector2(window.innerWidth, window.innerHeight),
-                0.9,
-                0.1,
-                0.1
-            );
-            composer.addPass(bloomPass);
+            //bloomPass = new UnrealBloomPass(
+            //    new THREE.Vector2(window.innerWidth, window.innerHeight),
+            //    0.9,
+            //    0.1,
+            //    0.1
+            //);
+            //composer.addPass(bloomPass);
             const controls = new OrbitControls(camera, renderer.domElement);
             controls.minDistance = 10;
             controls.maxDistance = 30;
 
-            scene.add(new THREE.AmbientLight(0x666666));
+            //scene.add(new THREE.AmbientLight(0x666666));
 
 
 
@@ -164,7 +161,8 @@
         }
 
         function render() {
-            composer.render();
+            renderer.render(scene, camera);
+            //composer.render();
         }
 
     </script>
