@@ -53,14 +53,14 @@
 
         const container = document.getElementById('container');
 
-        let renderer, scene, camera, clock, mesh;
+        let renderer, scene, camera, /*clock,*/ mesh;
 
         init();
         animate();
 
         function init() {
 
-            var clock = new THREE.Clock();
+            //var clock = new THREE.Clock();
             renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
 
             renderer.setPixelRatio(window.devicePixelRatio);
@@ -143,7 +143,7 @@
         function render() {
             renderer.render(scene, camera);
             //var t = performance.now() * 0.000001;
-            mesh.rotateY(clock.getElapsedTime() * 0.001);
+            //mesh.rotateY(clock.getElapsedTime() * 0.001);
         }
 
     </script>
