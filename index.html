@@ -84,7 +84,7 @@
 
                 const material = new THREE.PointsMaterial({ size: 0.01, vertexColors: true });
                 mesh = new THREE.Points(geometry, material);
-
+                mesh.name = "ply";
                 mesh.position.x = - 0.2;
                 mesh.position.y = - 0.52;
                 mesh.position.z = - 0.0;
@@ -94,6 +94,8 @@
 
                 scene.add(mesh);
             });
+
+            mesh = scene.getObjectByName("ply");
 
 
 
