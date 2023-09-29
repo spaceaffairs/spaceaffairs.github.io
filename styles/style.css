@@ -381,14 +381,14 @@ label {
 #loader {
     display: block;
     position: relative;
-    left: 50%;
-    top: 50%;
-    width: 150px;
-    height: 150px;
-    margin: -75px 0 0 -75px;
+    left: 0%;
+    top: 0%;
+    width: 100%; /*150px;*/
+    height: 100%; /*150px;*/
+    /*margin: -75px 0 0 -75px;*/
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: #9370DB;
+    border-top-color: #bbbbbb;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
@@ -402,7 +402,7 @@ label {
         bottom: 5px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #BA55D3;
+        border-top-color: #818181;
         -webkit-animation: spin 3s linear infinite;
         animation: spin 3s linear infinite;
     }
@@ -416,7 +416,7 @@ label {
         bottom: 15px;
         border-radius: 50%;
         border: 3px solid transparent;
-        border-top-color: #FF00FF;
+        border-top-color: #FFFFFF;
         -webkit-animation: spin 1.5s linear infinite;
         animation: spin 1.5s linear infinite;
     }
