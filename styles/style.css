@@ -362,7 +362,7 @@ label {
     font-size: 2rem;
 }
 
-/*#loading-screen {
+#loading-screen {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -447,4 +447,4 @@ label {
         -ms-transform: rotate(360deg);
         transform: rotate(360deg);
     }
-}*/
+}
