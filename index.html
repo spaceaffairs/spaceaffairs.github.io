@@ -42,6 +42,12 @@
         }
     </script>
 
+    <section id="loading-screen">
+
+        <div id="loader"></div>
+
+    </section>
+
     <div class="iasaLogo">
         <img class="iasa" src='images/IASA_logo_grau.svg'>
     </div>
@@ -77,7 +83,34 @@
             controls.minDistance = 10;
             controls.maxDistance = 30;
 
-            const loader = new PLYLoader();
+
+            const manager = new THREE.LoadingManager(() => {
+
+                const loadingScreen = document.getElementById('loading-screen');
+                loadingScreen.classList.add('fade-out');
+
+                // optional: remove loader from DOM via event listener
+                loadingScreen.addEventListener('transitionend', onTransitionEnd);
+
+            });
+
+            manager.onStart = function (url, itemsLoaded, itemsTotal) {
+                console.log('Started loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+            };
+
+            manager.onLoad = function () {
+                console.log('Loading complete!');
+            };
+
+            manager.onProgress = function (url, itemsLoaded, itemsTotal) {
+                console.log('Loading file: ' + url + '.\nLoaded ' + itemsLoaded + ' of ' + itemsTotal + ' files.');
+            };
+
+            manager.onError = function (url) {
+                console.log('There was an error loading ' + url);
+            };
+
+            const loader = new PLYLoader(manager);
 
 
             loader.load('3D/models/ply/Leafs07_clean_300K.ply', function (geometry) {
